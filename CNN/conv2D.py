@@ -42,5 +42,5 @@ class Conv2D(nn.Module):
         self.weights = nn.Parameter(torch.rand(kernel_size))
         self.bias = nn.Parameter(torch.zeros(1))
         
-    def forwaed(self, X):
+    def forward(self, X):
         return corr2d(X, self.weights) + self.bias
